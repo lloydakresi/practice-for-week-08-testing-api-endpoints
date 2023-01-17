@@ -10,6 +10,18 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
+fetch("/posts", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: ""
+})
+.then(res => res.json())
+.then(body => console.log(body))
+
+
+
 
 
 
@@ -20,3 +32,14 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
+fetch("/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    message: "hello world"
+  })
+})
+.then((response)=> response.json())
+.then((parsedBody) => console.log(parsedBody));
